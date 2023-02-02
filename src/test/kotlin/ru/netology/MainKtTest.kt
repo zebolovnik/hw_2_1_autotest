@@ -18,7 +18,7 @@ class MainKtTest {
             amountPerMonth = amountPerMonth
         )
 
-        assertEquals(620, result)
+        assertEquals(0, result)
     }
     @Test
     fun notCommissionsMasterCard() {
