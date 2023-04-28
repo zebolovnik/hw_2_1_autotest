@@ -29,7 +29,10 @@ fun commissions(
             sum == LIMIT_CARD -> 0
             else -> ERROR_LIMIT
         }
-        else -> ERROR_CARD
+        else -> {
+            println("Ввели неверный тип карты: $typeCard")
+            ERROR_CARD
+        }
     }
 }
 
@@ -37,4 +40,5 @@ fun commissionByCardType(typeCard: String) = when (typeCard) {
     TYPE_VK -> 0.0
     TYPE_MASTERCARD, TYPE_MAESTRO -> PERCENT
     else -> ERROR_CARD.toDouble()
+//    else -> throw IllegalArgumentException("Неверный тип карты: $typeCard")
 }
